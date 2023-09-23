@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+  body {
+    background: radial-gradient(#555, #000);
+  }
+  .stars {
+    width: 100%;
+    height: 100%;
+    background-image: url("stars.png");
+    animation: fading 1s linear infinite alternate,
+      background-rotate 10s linear alternate;
+  }
+  .sun {
+    width: 175px;
+    height: 175px;
+    background: radial-gradient(#f5c313, #ec7e08);
+    box-shadow: 0 0 50px #f5c91a;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: glowing 3s ease-in-out infinite alternate;
+  }
+  .earthDiv {
+    width: 450px;
+    height: 350px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: calc(-450px / 2);
+    margin-top: calc(-350px / 2);
+    animation: Rotate 5s linear infinite;
+  }
+  .earth {
+    width: 80px;
+    height: 80px;
+    background-image: url("earth.png");
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    left: -40px;
+    animation: Rotate 5s linear infinite alternate;
+  }
+  .moonDiv {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -35px;
+    left: -35px;
+    animation: Rotate 3s linear infinite reverse;
+  }
+  .moon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: radial-gradient(#ddd, #888);
+    position: absolute;
+    top: 50%;
+    margin-top: -12.5px;
+    left: -12.5px;
+  }
+  @keyframes fading {
+    from {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes background-rotate {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(10deg);
+    }
+  }
+  @keyframes Rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes glowing {
+    to {
+      box-shadow: 0 0 20px #f5c91a;
+    }
+  }
